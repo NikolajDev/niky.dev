@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project Page</title>
+    <link rel="stylesheet" href="style.css" />
+    <meta name="google-adsense-account" content="ca-pub-6113298507586146" />
+    <script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6113298507586146"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <h1>Link for Webpages</h1>
+
+    <div class="category">
+      <h2><i class="icon-folder"></i> HTML Projects</h2>
+      <div id="html-links" class="links-grid"></div>
+    </div>
+
+    <div class="category">
+      <h2><i class="icon-folder"></i> CSS Projects</h2>
+      <div id="css-links" class="links-grid"></div>
+    </div>
+
+    <script>
+      const config = {
+        files: [
+          "ResponsiveWebDesign/CSS/EventFlyerPage.html",
+          "ResponsiveWebDesign/CSS/BlogPostCard.html",
+          "ResponsiveWebDesign/CSS/BusinessCard.html",
+          "ResponsiveWebDesign/CSS/StylizedTo-Dolist.html",
+          "ResponsiveWebDesign/CSS/ContactForm.html",
+          "ResponsiveWebDesign/HTML/AudioandVideoPlayer.html",
+          "ResponsiveWebDesign/HTML/BookCatalog.html",
+          "ResponsiveWebDesign/HTML/CheckoutPage.html",
+          "ResponsiveWebDesign/HTML/EventHub.html",
+          "ResponsiveWebDesign/HTML/MovieReview.html",
+          "ResponsiveWebDesign/HTML/MultimediaPlayer.html",
+          "ResponsiveWebDesign/HTML/RecipePage.html",
+          "ResponsiveWebDesign/HTML/TravelAgencyPage.html",
+          "ResponsiveWebDesign/HTML/VideoCompilationPage.html",
+        ],
+      };
+
+      const cssContainer = document.getElementById("css-links");
+      const htmlContainer = document.getElementById("html-links");
+
+      config.files.forEach((file) => {
+        const a = document.createElement("a");
+        const fileName = file.split("/").pop();
+        a.href = file;
+        a.className = "link-item";
+        a.textContent = fileName;
+
+        // Rozdelenie do kontajnerov podľa cesty
+        if (file.includes("/HTML/")) {
+          htmlContainer.appendChild(a);
+        } else {
+          cssContainer.appendChild(a);
+        }
+      });
+    </script>
+    <footer>&copy; 2026 niky.dev</footer>
+  </body>
+</html>

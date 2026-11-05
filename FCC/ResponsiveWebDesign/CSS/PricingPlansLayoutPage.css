@@ -1,0 +1,138 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #0f172a;
+  color: #f1f5f9;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+h1 {
+  font-size: 2.25rem;
+  font-weight: 800;
+  margin-bottom: 36px;
+  letter-spacing: -0.5px;
+  color: #f8fafc;
+}
+
+/* Container conforming to FCC tests */
+.pricing-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 24px;
+  padding: 24px;
+  background-color: #1e293b;
+  border-radius: 12px;
+  border: 1px solid #334155;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
+}
+
+/* Pricing Card conforming to FCC tests */
+.pricing-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 0 0 220px;
+  border: 2px solid #334155;
+  border-radius: 8px;
+  background-color: #0f172a;
+  padding: 24px 18px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.pricing-card:hover {
+  transform: translateY(-4px);
+  border-color: #06b6d4;
+}
+
+/* Subtle highlight for Pro plan like the blue tint in the preview */
+.pricing-card.pro-plan {
+  background-color: #16243b;
+  border-color: #0284c7;
+}
+
+/* Typography & Divider */
+.card-header {
+  text-align: center;
+}
+
+.pricing-card h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.pricing-card .price {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #38bdf8;
+  margin-bottom: 12px;
+}
+
+.pricing-card hr {
+  border: none;
+  border-top: 1.5px solid #334155;
+  width: 75%;
+  margin: 0 auto 20px auto;
+}
+
+.features {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-size: 0.85rem;
+  line-height: 1.35;
+  margin-bottom: 24px;
+}
+
+.features li {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.features li.included::before {
+  content: "✓";
+  color: #10b981;
+  font-weight: 900;
+}
+
+.features li.excluded {
+  color: #64748b;
+}
+
+.features li.excluded::before {
+  content: "✕";
+  color: #f43f5e;
+  font-weight: 900;
+}
+
+.cta-btn {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  background-color: #06b6d4;
+  color: #0f172a;
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.cta-btn:hover {
+  background-color: #22d3ee;
+}

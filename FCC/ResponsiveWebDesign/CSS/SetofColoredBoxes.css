@@ -1,0 +1,62 @@
+/* 1. Define the font source for the internet */
+@font-face {
+    font-family: 'JetBrainsMono Nerd Font';
+    src: url('../../../fonts/JetBrainsMonoNerdFont-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+    /* Helps icons show up faster */
+}
+
+
+:root, * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "JetBrainsMono Nerd Font", monospace;
+    background-color: #f4f4f4;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    flex-direction: column;
+    text-align: center;
+}
+
+h1 {
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+.color-box {
+    display: inline-block;
+    background-color: purple;
+    width: 100px;
+    height: 100px;
+    border-radius: 25px;
+    margin: 20px;
+}
+
+.color1 {
+    background-color: #DF0000;
+}
+
+.color2 {
+    background-color: rgb(0,255,0);
+}
+
+.color3 {
+    background-color: blue;
+}
+
+.color4 {
+    background-color: hsl(290, 100%, 35%);
+}
+
+.color5 {
+    background-color: steelblue;
+}

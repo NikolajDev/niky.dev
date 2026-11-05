@@ -1,0 +1,117 @@
+/* 1. Define the font source for the internet */
+@font-face {
+    font-family: 'JetBrainsMono Nerd Font';
+    src: url('../../../fonts/JetBrainsMonoNerdFont-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+    /* Helps icons show up faster */
+}
+
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #1e1e2e; 
+    font-family: "JetBrainsMono Nerd Font", monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; 
+    margin: 0;
+    color: #cdd6f4; 
+}
+
+
+form {
+    background-color: #313244; 
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 500px;
+}
+
+h1 {
+    color: #89b4fa; 
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+    color: #bac2de;
+}
+
+input, textarea, select {
+    width: 100%; 
+    margin-bottom: 20px;
+    padding: 12px;
+    background-color: #181825;
+    border: 2px solid #45475a;
+    border-radius: 6px;
+    color: #cdd6f4;
+    font-family: inherit;
+    transition: all 0.3s ease; 
+}
+
+input:focus, textarea:focus {
+    border-color: #89b4fa;
+    outline: none;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #a6e3a1;
+    border: none;
+    border-radius: 6px;
+    color: #11111b;
+    font-weight: bold;
+    font-family: inherit;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #94e2d5;
+}
+
+
+input[type="radio"] {
+    width: auto;
+    margin-right: 10px;
+}
+
+
+input:first-of-type {
+    border-radius: 20px;
+}
+
+input:valid, select:valid, textarea:valid {
+    border-color: green;
+}
+
+input:invalid, select:invalid, textarea:invalid {
+    border-color: red; 
+}
+
+
+.radio-group input[type="radio"]:checked {
+    border-color: #89b4fa;
+    background-color: #89b4fa;
+    box-shadow: 0 0 5px #89b4fa;
+}
+
+
+input[type="radio"]:checked + label {
+    color: #89b4fa;
+    font-weight: bold;
+}

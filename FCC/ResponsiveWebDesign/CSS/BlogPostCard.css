@@ -1,0 +1,85 @@
+/* 1. Font ostáva, je to skvelá voľba! */
+@font-face {
+  font-family: "JetBrainsMono Nerd Font";
+  src: url("../../../fonts/JetBrainsMonoNerdFont-Regular.ttf")
+    format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #1a1a1a; /* Trochu tmavšia, prémiovejšia sivá */
+  font-family: "JetBrainsMono Nerd Font", monospace;
+  display: flex;
+  justify-content: center; /* Horizontálne vycentrovanie */
+  align-items: center; /* Vertikálne vycentrovanie */
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.blog-post-card {
+  background-color: #ffffff;
+  border-radius: 12px; /* Zaoblenejšie rohy sú dnes trendy */
+  width: 100%;
+  max-width: 450px; /* Lepšie ako 40vw, aby to na mobile nebolo príliš úzke */
+  overflow: hidden; /* Aby obrázok nepretŕčal cez zaoblené rohy */
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease; /* Jemná animácia pri hoveri */
+}
+
+.blog-post-card:hover {
+  transform: translateY(-5px); /* Karta sa pri prejdení myšou trochu nadvihne */
+}
+
+.post-img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover; /* Obrázok sa nedeformuje */
+  border-bottom: 4px solid #9b59b6; /* Fialový akcent namiesto sivej */
+}
+
+.post-content {
+  padding: 30px;
+  text-align: center;
+}
+
+.post-title {
+  color: #2c3e50;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  font-weight: 800;
+  text-transform: uppercase; /* Trochu agresívnejší programátorský štýl */
+}
+
+.post-excerpt {
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.read-more {
+  color: #2c2c2c;
+  background-color: #2ecc71; /* Svieža zelená */
+  padding: 12px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.2s ease;
+  border: 2px solid transparent;
+}
+
+.read-more:hover {
+  background-color: transparent;
+  border-color: #2ecc71;
+  color: #2ecc71;
+}

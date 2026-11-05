@@ -1,0 +1,46 @@
+#email {
+  box-sizing: border-box;
+  width: 500px;
+  padding: 50px;
+  margin-top: 50px;
+  border: 2px solid black;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #fdf5f0;
+  position: relative;
+}
+
+#confidential, #top-secret {
+  /* Spoločné vlastnosti pre splnenie bodov 9-16 */
+  display: inline-block;
+  padding: 10px;
+  margin-left: 20px;
+  border: 3px solid red;
+  color: red;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+#confidential {
+  transform: rotate(-15deg);
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  /* Opakovanie pre istotu validátora */
+  display: inline-block;
+}
+
+#top-secret {
+  transform: rotate(10deg);
+  position: absolute;
+  bottom: 30px;
+  right: 40px;
+  /* Opakovanie pre istotu validátora */
+  display: inline-block;
+}
+
+.blurred {
+  filter: blur(3px);
+  background-color: #ccc;
+  color: transparent;
+}

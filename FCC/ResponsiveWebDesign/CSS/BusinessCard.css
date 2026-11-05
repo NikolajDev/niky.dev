@@ -1,0 +1,61 @@
+/* 1. Define the font source for the internet */
+@font-face {
+    font-family: 'JetBrainsMono Nerd Font';
+    src: url('../../../fonts/JetBrainsMonoNerdFont-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+    /* Helps icons show up faster */
+}
+
+body {
+    background-color: rosybrown;
+    font-family: 'JetBrainsMono Nerd Font', monospace;
+}
+
+.business-card {
+    width: 300px;
+    background-color: aliceblue;
+    padding: 20px;
+    margin: 100px auto 0 auto;
+    text-align: center;
+    border: solid #4c4c4c;
+}
+
+.profile-image {
+    max-width: 100%;
+}
+
+.full-name {
+    font-size: 28px;
+    color: green;
+    /* Added semicolon */
+}
+
+.designation {
+    font-size: 22px;
+    color: gray;
+}
+
+.company {
+    font-size: 22px;
+    color: darkgreen;
+}
+
+p {
+    margin: 5px auto 5px auto;
+    /* Added semicolon */
+}
+
+a {
+    text-decoration: none;
+    color: brown;
+    margin: 10px;
+}
+
+hr {
+    height: 1px;
+    background-color: #2c2c2c;
+    border: none;
+    /* Helps ensure the background color shows consistently across browsers */
+}

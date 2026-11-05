@@ -1,0 +1,78 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-color: #2c2c2c;
+    --text-color: #ffd000;
+    --link-color: #0063f8;
+    --link-hover-color: #00aeff;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Fira Code', monospace;
+}
+
+.grid-projects {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+.grid-projects > a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.project-card {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    border: 1px solid var(--link-color);
+    background-color: #222;
+    transition: border-color 0.3s ease-in-out;
+}
+
+.project-card img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    transition: all 0.3s ease-in-out;
+}
+
+.project-card h1, 
+.project-card p {
+    padding: 10px;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.project-card:hover {
+    border-color: var(--link-hover-color);
+}
+
+.project-card:hover img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project-card:hover h1,
+.project-card:hover p {
+    opacity: 0;
+}

@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modern Design Checkout</title>
+  </head>
+  <body>
+    <div class="checkout-wrapper">
+      <h1>Checkout</h1>
+
+      <section>
+        <h2>Your Cart</h2>
+        <img
+          src="https://picsum.photos/id/1059/300/300"
+          alt="Vintage mechanical clock on a wooden table"
+        />
+        <p>Premium Mechanical Desk Clock</p>
+        <p>Price: $45.00</p>
+      </section>
+
+      <section>
+        <h2>Payment Information</h2>
+        <form action="/process-order" method="POST">
+          <div>
+            <label for="card-name">
+              Cardholder Name <span aria-hidden="true">*</span>
+            </label>
+            <input type="text" id="card-name" name="card-name" required />
+          </div>
+
+          <div>
+            <label for="card-number">
+              Card Number <span aria-hidden="true">*</span>
+            </label>
+            <input
+              type="text"
+              id="card-number"
+              name="card-number"
+              aria-describedby="card-number-help"
+              required
+            />
+            <p id="card-number-help">
+              Please enter your 16-digit card number without any spaces or
+              hyphens.
+            </p>
+          </div>
+
+          <div>
+            <label for="expiry-date">Expiry Date</label>
+            <input
+              type="text"
+              id="expiry-date"
+              name="expiry-date"
+              placeholder="MM/YY"
+            />
+          </div>
+
+          <div>
+            <label for="cvv">CVV</label>
+            <input type="text" id="cvv" name="cvv" maxlength="3" />
+          </div>
+
+          <button type="submit">Place Order</button>
+        </form>
+      </section>
+    </div>
+    <footer
+      style="
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        z-index: 9999;
+        text-align: center;
+        background-color: rgba(255, 255, 255, 0.8);
+      "
+    >
+      &copy; 2026 niky.dev
+    </footer>
+  </body>
+</html>

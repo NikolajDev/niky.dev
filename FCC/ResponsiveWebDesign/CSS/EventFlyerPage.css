@@ -1,0 +1,126 @@
+@font-face {
+  font-family: "JetBrainsMono Nerd Font";
+  src: url("../../../fonts/JetBrainsMonoNerdFont-Regular.ttf")
+    format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* Catppuccin Mocha Theme Palette */
+  --bg-base: #1e1e2e; /* Deep dark purple-grey */
+  --text-main: #cdd6f4; /* Soft white/lavender text */
+  --accent-mauve: #cba6f7; /* Purple for main titles */
+  --accent-blue: #89b4fa; /* Blue for subtitles */
+  --accent-yellow: #f9e2af; /* Yellow for highlights */
+  --accent-rosewater: #f5e0dc; /* Soft pink for details */
+  --divider: #45475a; /* Subtle grey for lines */
+}
+
+*,
+:root {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-base);
+  font-family: "JetBrainsMono Nerd Font", monospace;
+  color: var(--text-main);
+
+  /* Flexbox centering */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  /* REQUIREMENTS MET: */
+  padding: 50px 0;
+  margin: 0 auto;
+  width: 80vw;
+  min-height: calc(100vh - 100px);
+}
+
+header {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+h1 {
+  color: var(--accent-mauve); /* Distinctive Catppuccin Purple */
+  font-size: 2.5rem;
+  margin: 15px 0;
+}
+
+p {
+  margin-bottom: 15px;
+}
+
+strong {
+  color: var(--accent-yellow); /* Pops out against the dark bg */
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+  margin: 20px 0;
+}
+
+/* REQUIREMENT: Width set to a percent value relative to parent */
+section {
+  width: 30%;
+  /* Optional: Adds a subtle glassmorphism effect popular in modern UI */
+  background: rgba(255, 255, 255, 0.03);
+  padding: 15px;
+  border-radius: 8px;
+}
+
+h2 {
+  color: var(--accent-blue);
+  margin-bottom: 15px;
+  border-bottom: 1px solid var(--divider);
+  padding-bottom: 5px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+}
+
+li::before {
+  content: "\f135"; /* Kód pre raketu */
+  font-family: "JetBrainsMono Nerd Font";
+  color: var(--accent-rosewater);
+  margin-right: 10px;
+  font-size: 0.8rem;
+
+  /* Trik na otočenie: */
+  display: inline-block; /* Nutné, aby fungoval transform */
+  transform: rotate(45deg); /* Otočí raketu o 45 stupňov doprava */
+}
+
+/* REQUIREMENT: Width set to a percent value relative to parent */
+hr {
+  width: 100%;
+  border: 0;
+  height: 2px;
+  background-color: var(--divider);
+  margin: 10px 0;
+}
+
+footer {
+  margin-top: auto;
+  opacity: 0.6;
+  font-size: 0.8rem;
+}
